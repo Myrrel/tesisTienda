@@ -1,0 +1,74 @@
+fleaMarket.com // MercadoDePulgas.com
+-------------------------------------
+
+Requerimientos Funcionales
+-----------------------------
+
+El proyecto consiste en el desarrollo de una aplicación Web que
+ gestiona el pedido de Producto Varios de manera online.
+
+1.	El sistema debe gestionar Paises.
+2.	El sistema debe gestionar Provincias con su País.[1]
+3.	El sistema debe gestionar Ciudades con su Provincia y su País.[2][1]
+4.	El sistema debe gestionar Clientes con sus Ciudades, Provincia y País[3][2][1]
+
+5.	El sistema debe gestionar Categorias.
+6.	El sistema debe gestionar Productos con sus Categorías[5]
+7.	El sistema debe listar Productos por Categorías.
+
+8.	El sistema debe gestionar Medios de Envio.
+9.  El sistema debe gestionar Medios de Pago.	
+10.	El sistema debe mostrar Estados de Pedidos.
+11.	El sistema debe registrar Pedidos con su Estado de Pedido, Medio de Pago, Medio de Envío, sus Productos y su Cliente.[10][9][8][6]
+	
+	a. El sistema debe poner los pedidos nuevos en Estado de Pedido a Pendiente de Pago
+	 	
+	b. El sistema debe modificar los Estado de Pedido Pendiente de Pago a Cancelado una vez que el Cliente cancele el pedido.[a]
+
+	c. El sistema debe modificar los Estado de Pedido Pendiente de Pago a en Preparación una vez que el Cliente pagó por el pedido.[a]
+
+	d. El sistema debe modificar los Estado de en Preparación a Enviado una vez que el Pedido fue preparado.[c]
+
+12. El sistema debe mostrar los pedidos del cliente realizados.[11]
+13.	El sistema debe buscar Productos por Categorías. [5]
+14.	El sistema debe buscar Productos por Nombre.
+15.	El sistema debe buscar Productos por Descripción.
+16.	El sistema debe notificar mediante email al Cliente que su pedido fue realizado,  adjuntando el pedido, Medio de Pago, junto con la dirección de envío y su Medio de Envio a utilizar. [9][8]
+
+Requerimientos No Funcionales
+-----------------------------
+
+1.	El sistema contará con un Administrador quien se ocupará de la gestion de los Productos y Categorias.
+
+Diccionario
+-----------
+
+Pais: 
+Atributos:  Nombre.
+
+Provincia: 
+Atributos:  Nombre Provincia, País.
+
+Ciudad:
+Atributos:  Nombre Ciudad, Provincia, País.
+
+Cliente: Nombre, Apellido, Razon Social,Correo electrónico, Contraseña, Dirección, Localidad, Provincia, País,Teléfono1, Teléfono2, web. 
+
+Categoría:  Nombre, Descripción. (ej: Novedades, Ofertas,Bazar,Herramientas, Jardineria,etc)
+
+Producto:  Nombre, Descripción, COD/REF, Pack de Venta, Categorias ( puede ser una o muchas), Precio Minorista, Precio Mayorista, Precio Especial.
+
+	Precio Minorista: precio por un solo articulo.
+
+	Precio Mayorista: precio mas barato establecido por la adquisicion de una cantidad de unidades especificadas en Pack de Venta.
+
+	Pack de Venta: cantidad de unidades minimas para la venta con Precio Mayorista.
+
+Pedido:  numero, Nombre/Razon Social del cliente,  detalle del pedido, fecha,
+monto, Medio de pago, Medio de Envío,estado del pedido (pendiente de pago, cancelado, en preparación, enviados).
+
+Medio de Envío : transporte o empresa que realizará el envío del Pedido realizado.
+
+Medio de Pago : sístema por el cual se hará el pago del Pedido realizado.
+
+------------------------------------------------------------------------------
